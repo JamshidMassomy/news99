@@ -1,0 +1,23 @@
+.search-news {
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 30rem;
+}
+
+.news-main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  max-width: 60%;
+  margin: auto;
+  &-view {
+    padding-left: 0.5rem;
+    width: 100%;
+  }
+  &-content {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+}

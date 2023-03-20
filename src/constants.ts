@@ -1,0 +1,6 @@
+export const SHOW_DIALOG = 'SHOW_DIALOG';
+export const SHOW_ERROR = 'SHOW_ERROR';
+export const HIDE_OVERLAY = 'HIDE_OVERLAY';
+export const HIDE_DIALOG = 'HIDE_DIALOG';
+export const HIDE_ERROR = 'HIDE_ERROR';
+export const SHOW_NOTIFICATION = 'SHOW_PAGE_NOTIFICATION';

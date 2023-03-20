@@ -1,0 +1,11 @@
+.toast {
+  position: absolute;
+  display: none;
+  top: 5rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+.toast.active {
+  display: block;
+}

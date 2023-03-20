@@ -1,0 +1,25 @@
+.news-img-wrapper {
+  display: flex;
+  min-width: 10rem;
+  min-height: 8rem;
+  max-width: 10rem;
+  max-height: 8rem;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  width: 32rem;
+  height: 9rem;
+  .img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+.news-card {
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  width: 35rem;
+  box-shadow: rgb(0 0 0 / 5%) 1px 0px 0px 1px;
+  border-bottom: solid lightgrey 0.1px;
+}
