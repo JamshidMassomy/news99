@@ -3,7 +3,7 @@ import React from 'react';
 // redux
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
-import { showError } from '../action/pageAction';
+import { showNotification } from '../action/pageAction';
 import { fetchApi } from '../api/api.config';
 
 // context
@@ -30,7 +30,6 @@ export const AuthProvider = ({ children }) => {
 
   const isLoggedIn = () => {
     return apiKey !== null && user !== null;
-    // to avoid overnight login // session timeout
   };
 
   const handleSuccessfulLogin = () => {
@@ -45,7 +44,7 @@ export const AuthProvider = ({ children }) => {
         handleSuccessfulLogin();
       })
       .catch(() => {
-        dispatch(showError()); // faild login
+        dispatch(showNotification('Incorrect username or API key')); // faild login
       });
   };
 

@@ -1,13 +1,7 @@
 const initialState = {
   user: {},
   page: {
-    isDialogActive: false,
-    isError: false,
-    dialog: {
-      isActive: false,
-      message: '',
-    },
-    error: {
+    notification: {
       isActive: false,
       message: '',
     },

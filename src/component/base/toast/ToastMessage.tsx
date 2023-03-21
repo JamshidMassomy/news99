@@ -9,16 +9,19 @@ import classNames from 'classnames';
 
 // styles
 import './ToastStyle.scss';
+import { useDispatch } from 'react-redux';
+import { hideNotification } from '../../../action/pageAction';
 
 export default function ToastMessage(props: Notification) {
   const { message, type, isActive } = props;
-
   const [visible, setVisible] = useState(isActive);
+  const dispatch: any = useDispatch();
 
   useEffect(() => {
     setVisible(isActive);
     const timer = setTimeout(() => {
       setVisible(false);
+      dispatch(hideNotification());
     }, 2500);
 
     return () => {

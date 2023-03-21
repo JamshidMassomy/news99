@@ -1,17 +1,17 @@
-export const fetchApi = (parms?: any, options: any = {}) => {
-  const API_BASE_URL = `https://newsapi.org/v2/everything?q=${parms || ''}`;
+import { API_BASE_URL } from '../constants';
 
+export const fetchApi = (parms?: any, options: any = {}) => {
   return new Promise((resolve, reject) => {
     const cachedApiKey = localStorage.getItem('apikey') || null;
-    const fetchData = {
+    const data = {
       method: options?.method || 'GET',
       headers: {
         Accept: 'application/json',
         'X-Api-Key': options?.apiKey || JSON.parse(cachedApiKey),
       },
     };
-
-    fetch(API_BASE_URL, fetchData).then((response) => {
+    const api = API_BASE_URL + parms;
+    fetch(api, data).then((response) => {
       if (response.ok) {
         response
           .json()

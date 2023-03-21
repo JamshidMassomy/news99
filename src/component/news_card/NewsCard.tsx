@@ -25,7 +25,7 @@ export default function NewsCard(props: INewsArticle) {
         <div className='p-4 flex flex-col justify-between'>
           <div>
             <p className='text-sm text-gray-600'>{source?.name || ''}</p>
-            <div className='text-gray-900 font-bold text-xl mb-2'>{title}</div>
+            <div className='text-gray-900 text-xl mb-2'>{title}</div>
           </div>
           <div className='flex items-center'>
             <a
