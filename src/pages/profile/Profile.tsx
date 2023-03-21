@@ -7,8 +7,9 @@ import { useLocalStorage } from '../../auth/useLocalStorage';
 export default function Profile() {
   const apiKey = useLocalStorage('apikey', null);
   const cachedUser = JSON.parse(localStorage.getItem('user')) || '';
+
   return (
-    <div className='flex flex-col items-center h-[100vh]'>
+    <div className='flex flex-col items-center'>
       <div className='relative flex flex-col items-center rounded-[20px] w-[400px] mx-auto p-4 bg-white bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:!shadow-none'>
         <div className='relative flex h-32 w-full justify-center rounded-xl bg-cover'>
           <img

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // router
-import { Route, Routes } from 'react-router-dom';
+import { Outlet, Route, Routes } from 'react-router-dom';
 
 // components
 import Login from '../auth/login/Login';
@@ -9,7 +9,7 @@ import News from '../pages/news/News';
 import PrivateRoute from '../auth/PrivateRoute';
 import NotFound from '../pages/error/NotFound';
 import Profile from '../pages/profile/Profile';
-import App from '../App';
+import Navbar from '../component/navbar/Navbar';
 
 export default function RouteX() {
   return (
@@ -19,10 +19,22 @@ export default function RouteX() {
         path='/'
         element={
           <PrivateRoute>
-            <App />
+            <Navbar />
+            <div className='dashboard-content min-h-fit bg-gray-50'>
+              <Outlet />
+            </div>
           </PrivateRoute>
         }
       >
+        <Route
+          path='/'
+          element={
+            <PrivateRoute>
+              <News />
+            </PrivateRoute>
+          }
+        />
+
         <Route
           path='news'
           element={

@@ -54,7 +54,7 @@ export default function News() {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    return searchNews();
+    searchNews();
   };
 
   const searchNews = async () => {

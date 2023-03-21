@@ -4,7 +4,7 @@ import Button from '../../../component/base/button/Buttons';
 import Icon from '../../../component/base/icon/Icon';
 
 interface ISearchInput {
-  handleSearch?: () => void;
+  handleSearch?: (search?) => void;
   handleInputChange?: (event: any) => void;
   defaultValue?: string;
   required: any;
