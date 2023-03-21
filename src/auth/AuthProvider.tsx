@@ -36,8 +36,8 @@ export const AuthProvider = ({ children }) => {
     navigate('/news');
   };
 
-  const login = (loginData: ILogin) => {
-    fetchApi('login', loginData)
+  const login = async (loginData: ILogin) => {
+    await fetchApi('login', loginData)
       .then(() => {
         setApikey(loginData?.apiKey || null);
         setUser(loginData?.username);

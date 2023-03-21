@@ -38,9 +38,9 @@ export default function News() {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  const fetchNews = () => {
+  const fetchNews = async () => {
     if (isTokeValid()) {
-      fetchApi(`everything&pageSize=${itemsPerPage}&page=${currentPage}`)
+      await fetchApi(`everything&pageSize=${itemsPerPage}&page=${currentPage}`)
         .then((data: INews) => {
           setNews(data);
           setTotalPages(Math.ceil(data.totalResults / itemsPerPage));

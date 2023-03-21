@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from '../../component/base/input/Input';
-// import ava from '../../../public/ava.png';
-// import back from '../../../public/back.png';
+import back from './../../assets/images/back.png';
+
 import { useLocalStorage } from '../../auth/useLocalStorage';
 
 export default function Profile() {
@@ -14,11 +14,11 @@ export default function Profile() {
         <div className='relative flex h-32 w-full justify-center rounded-xl bg-cover'>
           <img
             alt='background'
-            src={''}
+            src={back}
             className='absolute flex h-32 w-full justify-center rounded-xl bg-cover'
           />
           <div className='absolute -bottom-12 flex h-[87px] w-[87px] items-center justify-center rounded-full border-[4px] border-white bg-pink-400 dark:!border-navy-700'>
-            <img className='h-full w-full rounded-full' src={'ava'} alt='' />
+            <img className='h-full w-full rounded-full' alt='' />
           </div>
         </div>
         <div className='mt-16 flex flex-col items-center'>
